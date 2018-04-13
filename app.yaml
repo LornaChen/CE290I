@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Apr  7 12:07:47 2018
+
+@author: Lorna
+"""
+libraries:
+- name: numpy
+  version: "1.6.1"
+- name: matplotlib
+  version: "1.2.0"
+- name: setuptools
+  version: "36.6.0"
+
+runtime: python27
+api_version: 1
+threadsafe: false
+
+# [START handlers]
+handlers:
+- url: /static
+  static_dir: static
+- url: /.*
+  script: main.app
+# [END handlers]
